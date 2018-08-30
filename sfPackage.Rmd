@@ -1,0 +1,150 @@
+---
+title: "The sf package"
+output: html_notebook
+---
+
+#### 1.0 - Purpose
+
+
+
+#### 2.0 Prereq
+
+
+##### 2.1 Packages
+
+
+```{r}
+library(sf)
+setwd("C:/WorkDocs/rGIS/vector")
+```
+
+
+##### 2.2 Load Data
+
+
+```{r}
+#Download and unzip shapefile from open data site
+#Download school locations point shapefile
+downloadLink <- "http://opendata.toronto.ca/gcc/school_frm_police_mtm3.zip"
+download.file(url = downloadLink,
+              destfile = "school_frm_police_mtm3.zip", mode = "wb")
+
+
+#Download TTC subway line shapefile
+downloadLink <- "http://opendata.toronto.ca/gcc/TTC_subway%20lines_mtm3.zip"
+download.file(url = downloadLink,
+              destfile = "TTC_subway lines_mtm3.zip", mode = "wb")
+
+
+#Download ward polygon
+downloadLink <- "http://opendata.toronto.ca/gcc/WARD25_OpenData_08072018_mtm3.zip"
+download.file(url = downloadLink,
+              destfile = "WARD25_OpenData_08072018_mtm3.zip", mode = "wb")
+
+
+#Get all zip files in directory
+allZip <- list.files(path = "C:/WorkDocs/rGIS/vector", pattern = "*.zip", full.names = TRUE)
+plyr::ldply(.data = allZip, .fun = unzip)
+```
+
+
+```{r}
+#Get names of unzipped files
+unzipSHP <- list.files(path = "C:/WorkDocs/rGIS/vector", pattern = "*.shp", full.names = TRUE)
+unzipSHP
+```
+
+
+```{r}
+#Load shapefile using sf package
+
+schools <- st_read("SCHOOL.shp")
+subway <- st_read("TTC_SUBWAY_LINES.shp")
+wards <- st_read("WARD.shp")
+```
+
+
+#### 3.0 Data Manipulation with sf
+
+
+##### 3.1 Geometric Operations
+
+
+
+##### 3.2 Geometric Confirmation
+
+
+
+##### 3.3 Geometry Creation
+
+
+
+##### 3.4 Geometry Operations
+
+
+***st_crop***
+
+
+***st_difference***
+
+
+***st_intersection***
+
+
+***st_sym_difference***
+
+
+***st_snap***
+
+
+***st_union***
+
+
+##### 3.5 Gemetry Validation
+
+***st_is_empty***
+
+
+***st_is_simple***
+
+
+***st_is_valid***
+
+
+##### 3.6 Geometric Measurement
+
+
+***st_area***
+
+
+***st_distance***
+
+
+***st_length***
+
+
+##### 3.7 Misc Operations
+
+***st_cast***
+
+
+***st_coordinates***
+
+
+***st_crs***
+
+
+***st_join***
+
+
+***st_make_grid***
+
+
+***st_nearest_feature***
+
+
+***st_nearest_points***
+
+
+***st_transform***
+
