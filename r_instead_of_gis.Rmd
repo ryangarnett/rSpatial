@@ -1,0 +1,455 @@
+---
+title: "R instead of GIS"
+subtitle: "Using RStudio for location data analytics"
+organization: "City of Toronto"
+venue: "GIS Day 2018"
+author: "Ryan Garnett"
+tags: [GIS, data, analytics, visualization, analysis, spatial analysis, data analytics]
+output: html_notebook
+---
+
+### 1.0 Overview
+Analyzing, evaluating and visualizing geographic data is a common requirement within municipal governments. Typically these tasks have been undertaken within commercial or open source GIS software application (i.e. ArcMap, GRASS, MapInfo, QGIS, etc.). GIS applications are typically graphic user interfaces (GUI) that are comprised of a number of tools that can be used to perform analysis and visualization tasks. 
+
+R is an open source language that is typically considered to be used for statistical analysis. As a language R has been around for approximately 25 years, experiencing significant advancements. R Studios is a GUI based interface to R that allows for analysis, visualization, modelling, and more. 
+
+Within the domain of GIS R provides an excellent platform for data analysis, exploration, modelling, and visualization. The R community is very active in the development and advancement of geospatial packages (tools/libraries) that are available. This workshop will focus on providing an introduction to the understanding of capabilities of using R Studios as a GIS application. Within the workshop examples will focus on vector data, specifically around visualization, data exploration, and geoprocessing.
+
+### 2.0 Prerequisites
+R Studio, similar to other software application, has the capability to extend functionality via add-ins. Within the world of R add-ins are called "packages". A package is similar to a library in other programming languages (i.e. Python), or extensions in GIS applications (i.e. ArcMap or QGIS). 
+
+As of August 17, 2018 there were 12,851 packages available on the official repository. In order to access a package it must first be installed, which can be done with the following line of code: install.packages("packageName") i.e. install.packages("tidyverse"). Once a package is installed it must be accessed using a command called *library*. Within the tutorial we will be using four packages: tidyverse, sf, and mapview.
+
+<br>
+***tidyverse***
+
+The tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The core tidyverse includes the packages that you're likely to use in everyday data analyses. As of tidyverse 1.2.0, the following packages are included in the core tidyverse:
+
+* ggplot2
+* dplyr
+* tidyr
+* readr
+* purrr
+* tibble
+* stringr
+* forcats
+
+<br>
+***sf***
+
+Support for simple features, a standardized way to encode spatial vector data. Binds to 'GDAL' for reading and writing data, to 'GEOS' for geometrical operations, and to 'PROJ' for projection conversions and datum transformations.
+
+<br>
+***mapview***
+
+An R package created to help researchers during their spatial data analysis workflow. It provides functions to very quickly and conveniently create interactive visualizations of spatial data. It was created to fill the gap of quick (not presentation grade) interactive plotting to examine and visually investigate both aspects of spatial data, the geometries and their attributes.
+
+#### 2.1 Packages
+
+```{r}
+library(tidyverse)
+library(sf)
+library(mapview)
+```
+
+#### 2.2 Loading Vector Data
+
+```{r}
+# Data downloaded from City of Toronto's Open Data Catalog
+# https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/
+
+# Load vector (shapefile) information
+setwd("C:/WorkDocs/rGIS/vector")
+
+schools <- st_read("SCHOOL.shp")
+subway <- st_read("TTC_SUBWAY_LINES.shp")
+wards <- st_read("WARD.shp")
+
+#schools download url: http://opendata.toronto.ca/gcc/school_frm_police_mtm3.zip
+#subway download url: http://opendata.toronto.ca/gcc/TTC_subway%20lines_mtm3.zip
+#wards download url: http://opendata.toronto.ca/gcc/WARD25_OpenData_08072018_mtm3.zip
+```
+
+### 3.0 Exploring Data
+Within most analytics projects, prior to performing analysis, there is a need to explore the data. Typically this involves looking at the attribute information, assessing for quality, trends, unique values, and determining if new attributes should be created. With location data there is another element that can be explored, the geometry. Within this section data exploration techniques, both attribute and geometry, will covered. 
+
+
+#### 3.1 Exploring Attributes
+One of the first steps inthe data exploration phase is to understand the structure of the attribute data, specifically knowing the column names and their data type (i.e. string, number, date, etc.). The ***str*** function will return the structure of the data table.
+
+```{r}
+#Explore schools data
+#View the structure of the data
+str(schools)
+```
+
+```{r}
+#Unique attributes of a column
+unique(schools$SCL_TP_DSC)
+```
+
+```{r}
+#Count unique attributes of a column
+schools %>%
+  group_by(BRD_NAME) %>%
+  count(BRD_NAME, sort = TRUE)
+```
+
+#### 3.1.1 Selecting Subsets of Data
+The abilitiy to select a subset of information is essential when analyzing data, as sometimes you may be interested in a portion of the dataset. Within R the ***select*** and ***filter*** functions in the ***tidyverse*** package allows for easy data selection and subsetting.
+
+```{r}
+#Selecting columns
+#Select specific columns
+schools %>%
+  select(NAME, SCL_TP, BRD_NAME,SCL_TP_DSC, ADD_FULL, MUN, CITY)
+```
+
+```{r}
+#Selecting attributes
+#Filter operators (i.e. greater than/less than, equal to, multiple equal, in range of)
+#Value greater than
+schools %>%
+  filter(LO_NUM > 50)
+
+#Value less than
+schools %>%
+  filter(LO_NUM < 50)
+
+#Equal to a value
+schools %>%
+  filter(LO_NUM == 10)
+
+#Multiple records equal to a value
+schools %>%
+  filter(LO_NUM %in% c(10, 20, 30))
+
+#Multiple text records equal to a value
+schools %>%
+  filter(SCL_TP_DSC %in% c("College", "English Public"))
+```
+
+```{r}
+#Selecting attributes
+#Filter attributes in multiple columns
+schools %>%
+  filter(LO_NUM < 50, SCL_TP_DSC == "College")
+```
+
+```{r}
+#Combining column and attribute selection
+schools %>%
+  select(NAME, SCL_TP, BRD_NAME, SCL_TP_DSC, LO_NUM, ADD_FULL, MUN, CITY) %>%
+  filter(LO_NUM < 50, SCL_TP_DSC == "College")
+```
+
+#### 3.2 Exploring Geometry
+Location data has another dimension of information, geometry. Exploring properties and components of the geometry can provide valuable insights into the data. Within this section we will explore common geometry exploration techniques.
+```{r}
+#Count the number of nodes
+npts(schools)
+npts(subway)
+npts(wards)
+```
+
+```{r}
+#Calculate area of polygon
+st_area(wards)               #area of each polygon
+sum(st_area(wards))          #sum of all polygons
+```
+
+```{r}
+#Add attribute to polygon with calculated area
+wards$area_m <- st_area(wards)
+head(wards)
+```
+
+```{r}
+#Calculate length of line
+st_length(subway)
+```
+
+```{r}
+#Add attribute to line with length
+subway$length_m <- st_length(subway)
+head(subway)
+```
+
+```{r}
+#Check for valid geometry (OGC)
+ogcGeom <- st_is_valid(wards)     #test layer for valid geometry
+length(ogcGeom[ogcGeom == FALSE])  #count the number of invalid geometry
+length(ogcGeom[ogcGeom == TRUE])   #count the number of valid geometry
+```
+
+```{r}
+#Create centroid of polygon
+wards_cent <- st_centroid(wards)
+```
+
+```{r}
+#Visualize centroids using ggplot
+
+ggplot() +
+  geom_sf(data = wards) +
+  geom_sf(data = wards_cent)
+```
+
+
+### 4.0 Plotting Data
+Displaying data visually within R can be accomplished with the use of many different packages. Within this workshop we will be focusing on the powerful ggplot2 package. ggplot2 allows for the visualization of both attribute and geographic information, resulting in a very useful tool for GIS users. 
+
+#### 4.1 Charts and Graphs
+Location data typically has attribute information, allowing for the creation of insightful visualization. Selecting an effective visualization is dependant on the available attributes. For further information on selecting effective visualization, refer to this [resource](https://cdn2.hubspot.net/hub/53/file-863940581-pdf/Data_Visualization_101_How_to_Design_Charts_and_Graphs.pdf) on designing graphs and charts.
+```{r}
+#Using ggplot2 to view attribute information (bar chart)
+#Visualizing the frequency of school group
+ggplot(schools, aes(SCL_TP_DSC)) +
+  geom_bar()
+
+
+#Visualizing the length of subway route length by TTC line
+ggplot(subway, aes(x = ROUTE_NAME, y = as.numeric(length_m), label = 'Length in metres')) +
+  geom_bar(stat = 'identity', aes(fill = RID)) +
+  labs(subtitle = "Length in metres",
+  title = "TTC Subway Routes") +
+  labs(x = "TTC Line Number") +
+  labs(y = "Length in metres") +
+  coord_flip()
+```
+
+#### 4.2 Static Maps - Simple Symbology
+Maps are an effective visualization for conveying geographic information. A map can server numerous purposes and can range in complexity. In many cases a basic map will suffice when initially exploring a dataset. The following examples illustrate how to display points, lines and polygons within ggplot2.
+
+```{r}
+#Plot point vector using ggplot2
+#Plot without symbology
+ggplot(data = schools) +
+  geom_sf()
+```
+
+```{r}
+#Plot line vector using ggplot2
+#Plot without symbology
+ggplot(data = subway) +
+  geom_sf()
+```
+
+```{r}
+#Plot polygon vector using ggplot2
+#Plot without symbology
+ggplot(data = wards) +
+  geom_sf()
+```
+
+
+#### 4.3 Static Maps - Custom Symbology
+While basic maps can be useful for initial data exploration, understanding tends and relationships from a basic map can be difficult. A method to gain visual insights is to use different symbology techniques. Within the workshop we will be focusing on symbology techniques, specifically: colours, transparency, size, shapes, labels, and legends. Examples with points, lines and polygons will be illustrated. 
+
+
+##### 4.3.1 Static Maps - Custom Symbology: Colours
+
+
+***Symbology - colour by text***
+```{r}
+#Map setting the color using color text
+#Map schools
+ggplot(data = schools) +
+  geom_sf(color = "red")
+```
+
+***Symbology - colour by value***
+```{r}
+#Map setting the color using hex code
+#Map subway
+ggplot(data = subway) +
+  geom_sf(color = "#FF0000")
+```
+
+***Symbology - colour by attribute***
+```{r}
+#Map setting the color based on attribute values
+#Map subway lines
+ggplot(data = subway) +
+  geom_sf(aes(color = ROUTE_NAME), show.legend = "line") 
+
+#The show.legend = "line" piece changes the legend symbology from polygons to line. Replacing "line" to "point" will use points in the legend
+```
+
+***Symbology - polygon fill***
+```{r}
+#Map setting the color using color text
+#Map wards
+ggplot(data = wards) +
+  geom_sf(fill = "red", color = "white")
+
+# fill controls the internal polygon colour; color controls the outline polygon colour
+```
+
+
+##### 4.3.2 Static Maps - Custom Symbology: Transparency
+Transparceny is an effective technique when diplaying datasets with a significant amount of data. Transparency can be applied with there is a need to layer where data points overlap each other, or when layers are stacked, or to visually deprioritize one layer over another.
+
+***Symbology - point transparency***
+```{r}
+#Map setting the transparceny of a point layer
+#Map schools
+ggplot(data = schools) +
+  geom_sf(alpha = 0.25)
+
+#Alpha is the means for controlling transparency. Values from 1 to 0 are used to set the transparency level, with 0 being fully transparent and 1 having no transparency.
+```
+
+***Symbology - polygon transparency***
+```{r}
+#Map setting the transparceny of a polygon
+#Map wards
+ggplot(data = wards) +
+  geom_sf(alpha = 0.25, fill = "red", color = "white")
+
+#Alpha is the means for controlling transparency. Values from 1 to 0 are used to set the transparency level, with 0 being fully transparent and 1 having no transparency.
+```
+
+##### 4.3.3 Static Maps - Custom Symbology: Sizes
+Modifying the size of an object can be useful in many scenarios, such as illustrating importance, or ensuring features are visible.
+
+***Symbology - static sizes***
+```{r}
+#Map setting the visual size (width) of the lines using a static value
+#Map subways
+ggplot(data = subway) +
+  geom_sf(aes(size = 3), show.legend = "line")
+
+#The show.legend = "line" piece changes the legend symbology from polygons to line. Replacing "line" to "point" will use points in the legend
+```
+
+***Symbology - sizes by attribute***
+```{r}
+#Map setting the visual size (width) of the lines using an attribute value
+#Map subways
+ggplot(data = subway) +
+  geom_sf(aes(size = RID), show.legend = "line")
+
+#The show.legend = "line" piece changes the legend symbology from polygons to line. Replacing "line" to "point" will use points in the legend
+```
+
+
+##### 4.3.4 Static Maps - Custom Symbology: Labels
+Visualizations are a source of media to convey information that would be too complex for written text. The addition of labels to a visualization can improve the communication, providing context to the visualization.
+
+```{r}
+ggplot() +
+  geom_sf(data = subway) +
+  labs(title = "TTC Subway Routes",      #using labs function to add the plot title
+       subtitle = "Line 1 to Line 4") +  #using labs function to add a plot subtitle
+  labs(x = "Longitutde") +               #using labs function to add a label on the x-axis
+  labs(y = "Latitude")                   #using labs function to add a label on the y-axis
+```
+
+
+##### 4.3.5 Static Maps - Custom Symbology: Multiple vectors in one map
+Rarely within location data analytics are visualizations created representing a single dataset. Typically multiple datasets are used in conjunction to illustrate the complexity of the analysis.
+
+```{r}
+#Map with point, line and polygon vector together
+ggplot() +
+  geom_sf(data = wards, alpha = 0.25, fill = "grey", color = "white") +
+  geom_sf(data = subway, color = subway$RID, size = 1.25) +
+  geom_sf(data = schools, color = "violet", alpha = 0.5)
+```
+
+
+### 5.0 Geoprocessing
+A significant component to location data analytics is intermediate stage, typically consisting of generating new datasets from existing data that will support analysis. There are many different geoprocessing operations, with varying parametres. This section will focus on one geoprocessing task that will be used in the next section, spatial analysis. For more geoprocessing examples see the [sf cheatsheet](https://github.com/ryangarnett/cheatsheat/blob/master/cheatsheetSFPackage.pdf).
+
+***Buffering***
+```{r}
+#Buffer
+#Buffer subway lines - not storing geometry
+st_buffer(subway, 1000)
+
+#Buffer subway lines - storing geometry
+subway_buffer <- st_buffer(subway, 1000)
+
+#Map of buffered subway lines
+ggplot() +
+  geom_sf(data = subway_buffer)
+
+#Map of buffered subway lines with subway lines
+ggplot() +
+  geom_sf(data = subway_buffer) +
+  geom_sf(data = subway, color = subway$RID, size = 1.25)
+```
+
+```{r}
+#Buffer selected record
+#Buffer subway line #2 (Bloor - Danforth)
+subway_buffer_line2 <- subway %>%
+  filter(RID == 2) %>%
+  st_buffer(1000)
+
+#Map of buffered subway line 2 (Bloor -Danforth)
+ggplot() +
+  geom_sf(data = subway_buffer_line2)
+
+#Map of buffered subway line 2 (Bloor -Danforth) with subway lines
+ggplot() +
+  geom_sf(data = subway_buffer_line2) +
+  geom_sf(data = subway, color=subway$RID, size = 1.25)
+```
+
+
+#### 5.1 Spatial Analysis
+Location data analytics is rooted in spatial analysis, leveraging tools and techniques for understanding the physical environment. Spatial analysis typically requires multiple datasets, and utilizes a combination of geoprocessing and analysis techniques. This section will focus on one spatial analysis problem -- identifying the schools that are within 1km of a subway line. The example will provide two alternatives: one where new data layers are created, and a second where all analysis is performed in the computers memory. For more spatial analysis examples see the [sf cheatsheet](https://github.com/ryangarnett/cheatsheat/blob/master/cheatsheetSFPackage.pdf).
+
+```{r}
+#Count points within polygon(s) - st_intersection
+#Requires geometry to be created
+count(st_intersection(schools, subway_buffer))
+```
+
+```{r}
+#Points in polygons - st_intersection
+schoolsInBuffer <- st_intersection(schools, subway_buffer)
+
+#Map points that intersect with subway buffer
+ggplot() +
+  geom_sf(data = subway_buffer) +
+  geom_sf(data = schools, color = "red") +
+  geom_sf(data = schoolsInBuffer, color = "black")
+```
+
+
+***Analysis without creating objects***
+
+```{r}
+#Count points within polygon(s) - st_intersection
+#Does not require geometry to be created
+count(st_intersection(schools, st_buffer(subway, 1000)))
+```
+
+```{r}
+#Map points that intersect with subway buffer
+#Does not require geometry to be created
+ggplot() +
+  geom_sf(data = st_intersection(schools, st_buffer(subway, 1000)))
+```
+
+
+### 6.0 Resources
+
+[GIS in R](http://www.nickeubank.com/gis-in-r/)
+
+[Spatial Data in R: New Directions](https://edzer.github.io/UseR2017/)
+
+[Geocomputation with R](https://geocompr.robinlovelace.net/)
+
+[R for Data Science](http://r4ds.had.co.nz/)
+
+[ggplot2 book](http://moderngraphics11.pbworks.com/f/ggplot2-Book09hWickham.pdf)
+
+[ggplot2 Colours Cookbook](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/)
+
+[Data visualization 101](https://cdn2.hubspot.net/hub/53/file-863940581-pdf/Data_Visualization_101_How_to_Design_Charts_and_Graphs.pdf)
+
+[sf cheatsheet](https://github.com/ryangarnett/cheatsheat/blob/master/cheatsheetSFPackage.pdf)
