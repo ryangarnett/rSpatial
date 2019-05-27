@@ -16,7 +16,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="sf_cheetsheet_pg2a.svg">
+   sodipodi:docname="sf_cheetsheet_pg2_ES.svg">
   <defs
      id="defs2">
     <inkscape:path-effect
@@ -3250,14 +3250,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.069399"
-     inkscape:cx="600.13656"
-     inkscape:cy="243.84533"
+     inkscape:zoom="0.5346995"
+     inkscape:cx="230.75038"
+     inkscape:cy="670.39547"
      inkscape:document-units="in"
      inkscape:current-layer="layer10"
      showgrid="false"
      units="cm"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1853"
      inkscape:window-height="1025"
@@ -9752,7 +9752,7 @@
          x="23.238878"
          y="-8.0709286"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335"
-   id="tspan19200">st_crop</tspan>(x, y, ..., xmin, ymin, xmax, ymax) Crea una </tspan><tspan
+   id="tspan19200">st_crop</tspan>(x, y, ..., xmin, ymin, xmax, ymax) Crea la </tspan><tspan
          style="stroke-width:0.26458335"
          sodipodi:role="line"
          x="23.238878"
@@ -9770,17 +9770,17 @@
          style="font-size:3.88055563px;stroke-width:0.26458335"
          id="tspan14414"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335"
-   id="tspan1166-4">st_union</tspan>(x, y, ..., by_feature) Combine varias geo-</tspan><tspan
+   id="tspan1166-4">st_union</tspan>(x, y, ..., by_feature) Combine varias </tspan><tspan
          sodipodi:role="line"
          x="23.138453"
          y="69.361801"
          style="font-size:3.88055563px;stroke-width:0.26458335"
-         id="tspan3284">metrías de características en una sola, sin unir o </tspan><tspan
+         id="tspan3284">geometrías de características en una sola, sin unir</tspan><tspan
          sodipodi:role="line"
          x="23.138453"
          y="74.212494"
          style="font-size:3.88055563px;stroke-width:0.26458335"
-         id="tspan3287">resolver límites internos.</tspan></text>
+         id="tspan3287">o resolver límites internos.</tspan></text>
     <g
        id="g19102"
        transform="translate(0.50028375,-22.767341)">
@@ -10050,12 +10050,12 @@
          style="font-size:3.88055563px;stroke-width:0.26458335"
          id="tspan9949"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335"
-   id="tspan950-6">st_snap</tspan>(x, y, tolerance) Ajustar nodos de la geome-</tspan><tspan
+   id="tspan950-6">st_snap</tspan>(x, y, tolerance) Ajustar nodos de la geo-</tspan><tspan
          sodipodi:role="line"
          x="23.138453"
          y="55.616493"
          style="font-size:3.88055563px;stroke-width:0.26458335"
-         id="tspan3272">tría x a la geometría y </tspan></text>
+         id="tspan3272">metría x a la geometría y </tspan></text>
     <g
        id="g14745"
        transform="translate(-2.1773373,-50.368179)">
@@ -10285,12 +10285,12 @@
          style="font-size:3.88055563px;stroke-width:0.26458335"
          id="tspan18639"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335"
-   id="tspan950-4">st_difference</tspan>(x, y) Crea una geometrí de x  que no </tspan><tspan
+   id="tspan950-4">st_difference</tspan>(x, y) Crea una geometrí de x  que </tspan><tspan
          sodipodi:role="line"
          x="23.138453"
          y="10.087826"
          style="font-size:3.88055563px;stroke-width:0.26458335"
-         id="tspan3249">intersecta con y</tspan></text>
+         id="tspan3249">no intersecta con y</tspan></text>
     <g
        id="g18892"
        transform="translate(0.66859561,-22.882817)">
@@ -10714,12 +10714,12 @@
          style="font-size:3.88055563px;stroke-width:0.26458335"
          id="tspan10239"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335"
-   id="tspan1166-4-1-73-0">st_nearest_points</tspan>(x, y, ...) Devuelve el punto más cercano a</tspan><tspan
+   id="tspan1166-4-1-73-0">st_nearest_points</tspan>(x, y, ...) Devuelve el punto más cercano</tspan><tspan
          sodipodi:role="line"
          x="134.64571"
          y="77.282356"
          style="font-size:3.88055563px;stroke-width:0.26458335"
-         id="tspan3359">x desde y</tspan></text>
+         id="tspan3359">a x desde y</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
@@ -10732,12 +10732,12 @@
          style="font-size:3.88055563px;stroke-width:0.26458335"
          id="tspan19405"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335"
-   id="tspan1166-4-1-6-4">st_transform</tspan>(x, crs, ...) Proyecta las coordenadas de x a un </tspan><tspan
+   id="tspan1166-4-1-6-4">st_transform</tspan>(x, crs, ...) Proyecta las coordenadas de x a </tspan><tspan
          sodipodi:role="line"
          x="134.64571"
          y="104.84006"
          style="font-size:3.88055563px;stroke-width:0.26458335"
-         id="tspan19407">sistema de referencia de coordenadas diferente</tspan></text>
+         id="tspan19407">un sistema de referencia de coordenadas diferente</tspan></text>
     <g
        transform="translate(-124.57393,128.55006)"
        style="display:inline"
@@ -10754,17 +10754,17 @@
            x="133.66687"
            sodipodi:role="line"><tspan
    id="tspan1193-7"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335">st_area</tspan>(x) Calcular el área de superficie de una geometría </tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335">st_area</tspan>(x) Calcula el área de superficie de una geometría </tspan><tspan
            style="font-size:3.88055563px;stroke-width:0.26458335"
            y="-17.771624"
            x="133.66687"
            sodipodi:role="line"
-           id="tspan3293">poligonal basada en el sistema de referencia de coordenadas</tspan><tspan
+           id="tspan3293">poligonal basada en el sistema de referencia de coordena-</tspan><tspan
            style="font-size:3.88055563px;stroke-width:0.26458335"
            y="-12.920929"
            x="133.66687"
            sodipodi:role="line"
-           id="tspan3301">actual</tspan></text>
+           id="tspan3301">das actual</tspan></text>
       <text
          id="text1191-8-5"
          y="-5.0809288"
@@ -10782,12 +10782,12 @@
            style="font-size:3.88055563px;stroke-width:0.26458335"
            y="-0.23023427"
            x="133.66687"
-           sodipodi:role="line">Calcula la distancia 2D entre x e y, basada en el sistema de</tspan><tspan
+           sodipodi:role="line">Calcula la distancia 2D entre x e y, basada en el sistema </tspan><tspan
            style="font-size:3.88055563px;stroke-width:0.26458335"
            y="4.6204605"
            x="133.66687"
            sodipodi:role="line"
-           id="tspan3305">referencia de coordenadas actual</tspan></text>
+           id="tspan3305">de referencia de coordenadas actual</tspan></text>
       <text
          id="text1191-1-8"
          y="13.606989"
@@ -10800,12 +10800,12 @@
            x="133.66687"
            sodipodi:role="line"><tspan
    id="tspan1193-2-4"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335">st_length</tspan>(x) Calcula longitud 2D de una geometría, basada en</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335">st_length</tspan>(x) Calcula longitud 2D de una geometría, basa-</tspan><tspan
            style="font-size:3.88055563px;stroke-width:0.26458335"
            y="18.457684"
            x="133.66687"
            sodipodi:role="line"
-           id="tspan3311">el sistema de referencia de coordenadas actual</tspan></text>
+           id="tspan3311">da en el sistema de referencia de coordenadas actual</tspan></text>
       <text
          id="text1012-1"
          y="-33.896004"
@@ -10889,12 +10889,12 @@
          style="font-size:3.88055563px;stroke-width:0.26458335"
          id="tspan3365"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335"
-   id="tspan1166-4-1-6-4-7">st_read</tspan>(dsn, layer, ...) Leer un conjunto de vectores a partir</tspan><tspan
+   id="tspan1166-4-1-6-4-7">st_read</tspan>(dsn, layer, ...) Leer un conjunto de vectores a par-</tspan><tspan
          sodipodi:role="line"
          x="134.64571"
          y="91.119606"
          style="font-size:3.88055563px;stroke-width:0.26458335"
-         id="tspan9398">de un fichero o base de datos como objeto sf</tspan></text>
+         id="tspan9398">tir de un fichero o base de datos como objeto sf</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
@@ -10907,12 +10907,12 @@
          style="font-size:3.88055563px;stroke-width:0.26458335"
          id="tspan19407-1"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88055563px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';stroke-width:0.26458335"
-   id="tspan1166-4-1-6-4-9">st_as_sf</tspan>(x, ...) Create a sf object from a non-geospatial </tspan><tspan
+   id="tspan1166-4-1-6-4-9">st_as_sf</tspan>(x, ...) Crea un objeto sf object a partir de un mar-</tspan><tspan
          sodipodi:role="line"
          x="134.64571"
          y="-17.831915"
          style="font-size:3.88055563px;stroke-width:0.26458335"
-         id="tspan9392">tabular data frame</tspan></text>
+         id="tspan9392">co de datos tabular no-geoespacial</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111164px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"

@@ -16,7 +16,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="sf_cheetsheet_pg1.svg">
+   sodipodi:docname="sf_cheetsheet_pg1_ES.svg">
   <defs
      id="defs2">
     <inkscape:path-effect
@@ -3251,13 +3251,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.6688423"
-     inkscape:cx="746.8418"
-     inkscape:cy="585.96738"
+     inkscape:cx="474.28078"
+     inkscape:cy="560.73817"
      inkscape:document-units="in"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer10"
      showgrid="false"
      units="cm"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1853"
      inkscape:window-height="1025"
@@ -10227,12 +10227,12 @@
          x="23.127256"
          y="-22.362213"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan8003">st_contains(x, y, ...) Identifica si x está </tspan><tspan
+         id="tspan8081">st_contains(x, y, ...) Identifica si x está den-</tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="-17.070545"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan8081">dentro de y (ej. puntos dentro de un polígono)</tspan></text>
+         id="tspan3598">tro de y (ej. puntos dentro de un polígono)</tspan></text>
     <g
        id="g3820"
        transform="translate(2.853222,-61.668042)"
@@ -10395,12 +10395,12 @@
          x="23.127256"
          y="59.218616"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan8039">st_equals(x, y, ...) Identifica su x e y comparten</tspan><tspan
+         id="tspan8039">st_equals(x, y, ...) Identifica su x e y compar-</tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="64.510284"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3609">la misma geometría</tspan></text>
+         id="tspan3609">ten la misma geometría</tspan></text>
     <g
        id="g4007"
        transform="translate(2.7929617,-67.710894)"
@@ -10736,22 +10736,22 @@
          x="23.127256"
          y="92.021393"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan4558">st_overlaps(x, y, ...) Identifica si las geometrías </tspan><tspan
+         id="tspan4558">st_overlaps(x, y, ...) Identifica si las geome-</tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="97.313057"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan4562">de x e y comparten espacio, son del misma di-</tspan><tspan
+         id="tspan4562">trías de x e y comparten espacio, son del mis-</tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="102.60473"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3617">mensión, pero no están completamente conteni-</tspan><tspan
+         id="tspan3617">ma dimensión, pero no están completamente</tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="107.89639"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan4564">das por cada una</tspan></text>
+         id="tspan4564">contenidas por cada una</tspan></text>
     <g
        id="g5098"
        transform="translate(2.7867921,-62.130254)"
@@ -10963,17 +10963,17 @@
          x="23.127256"
          y="117.17747"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan4568">st_touches(x, y, ...) Identifica si geometrías de x </tspan><tspan
+         id="tspan3625">st_touches(x, y, ...) Identifica si geometrías de</tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="122.46913"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3625">e y comparten un punto en común pero no sus</tspan><tspan
+         id="tspan4570">x e y comparten un punto en común pero sus </tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="127.7608"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan4570">interiores no se intersectan</tspan></text>
+         id="tspan3631">interiores no se intersectan</tspan></text>
     <g
        id="g5062"
        transform="translate(2.9196505,-64.389968)"
@@ -11146,12 +11146,12 @@
          x="23.127256"
          y="136.215"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan8075">st_within(x, y, ...) Identifica si x está dentro del</tspan><tspan
+         id="tspan8075">st_within(x, y, ...) Identifica si x está dentro </tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="141.50667"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan8103">área a una distancia específica alrededor de y</tspan></text>
+         id="tspan8103">del área a una distancia específica de y</tspan></text>
     <g
        id="g5106"
        transform="translate(5.1498019,-65.044328)"
@@ -13313,17 +13313,17 @@
          x="150.8253"
          y="124.66756"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3487">st_simplify(x, preserveTopology, dTolerance) Crea </tspan><tspan
+         id="tspan3487">st_simplify(x, preserveTopology, dTolerance)</tspan><tspan
          sodipodi:role="line"
          x="150.8253"
          y="129.95923"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3489">una versión simplificada de la geometría basada en</tspan><tspan
+         id="tspan3489">Crea una versión simplificada de la geometría,</tspan><tspan
          sodipodi:role="line"
          x="150.8253"
          y="135.25089"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3703">la tolerancia específicada.</tspan></text>
+         id="tspan3703">basada en la tolerancia específicada.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
@@ -13334,12 +13334,12 @@
          x="150.71574"
          y="90.230415"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3285">st_polygonize(x) Crea una geometría de polígono a</tspan><tspan
+         id="tspan3285">st_polygonize(x) Crea una geometría de polí-</tspan><tspan
          sodipodi:role="line"
          x="150.71574"
          y="95.522079"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan8624">partir de una geometría de línea</tspan></text>
+         id="tspan8624">gono a partir de una geometría de línea</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
@@ -13350,7 +13350,7 @@
          x="150.71574"
          y="46.512138"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan2552">st_line_merge(x) Crea una geometría &quot;linestring&quot;</tspan><tspan
+         id="tspan2552">st_line_merge(x) Crea una geometría linestring</tspan><tspan
          sodipodi:role="line"
          x="150.71574"
          y="51.803806"
@@ -13427,12 +13427,12 @@
          x="150.71574"
          y="75.657654"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3675">st_point_on_surface(x) Crea un punto que cae es-</tspan><tspan
+         id="tspan3683">st_point_on_surface(x) Crea un punto estricta-</tspan><tspan
          sodipodi:role="line"
          x="150.71574"
          y="80.949318"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3683">trictamente sobre la superficie de la geometría.</tspan></text>
+         id="tspan3648">mente sobre la superficie de la geometría.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
@@ -13443,12 +13443,12 @@
          x="150.71574"
          y="61.084896"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan2841">st_node(x) Crea nodos en la geometría especifi-</tspan><tspan
+         id="tspan2841">st_node(x) Crea nodos en la geometría especi-</tspan><tspan
          sodipodi:role="line"
          x="150.71574"
          y="66.376564"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3667">cada, donde no exixten nodos.</tspan></text>
+         id="tspan3667">ficada, donde no exixten nodos.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
@@ -13459,17 +13459,17 @@
          x="150.71574"
          y="104.80315"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3287">st_segmentize(x, dfMaxLength, ...) Crea una geo-</tspan><tspan
+         id="tspan3287">st_segmentize(x, dfMaxLength, ...) Crea una </tspan><tspan
          sodipodi:role="line"
          x="150.71574"
          y="110.09481"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan8633">metría linesting de x basada en una longitud espe-</tspan><tspan
+         id="tspan8633">geometría linesting de x basada en una longi-</tspan><tspan
          sodipodi:role="line"
          x="150.71574"
          y="115.38648"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan3695">cificada</tspan></text>
+         id="tspan3695">tud especificada</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
@@ -13582,7 +13582,7 @@
          id="tspan3643"
          x="216.58226"
          y="13.032939"
-         style="stroke-width:0.26458335"></tspan></text>
+         style="stroke-width:0.26458335" /></text>
   </g>
   <g
      inkscape:groupmode="layer"
