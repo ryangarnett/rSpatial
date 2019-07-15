@@ -15,7 +15,7 @@
    viewBox="0 0 388.06 299.86"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (33fec40, 2019-01-16)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="sf_cheetsheet_pg2a.svg">
   <defs
      id="defs2">
@@ -3250,11 +3250,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.75617927"
-     inkscape:cx="733.34173"
-     inkscape:cy="566.66457"
+     inkscape:zoom="2.7747234"
+     inkscape:cx="222.16954"
+     inkscape:cy="887.35572"
      inkscape:document-units="in"
-     inkscape:current-layer="layer10"
+     inkscape:current-layer="layer6"
      showgrid="false"
      units="cm"
      showguides="false"
@@ -9551,7 +9551,7 @@
          x="23.127256"
          y="-22.362213"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335"
-         id="tspan8003">st_contains(x, y, ...) Identifies if x is within y </tspan><tspan
+         id="tspan8003">st_contains(x, y, ...) Identifies if y is within x </tspan><tspan
          sodipodi:role="line"
          x="23.127256"
          y="-17.070545"
